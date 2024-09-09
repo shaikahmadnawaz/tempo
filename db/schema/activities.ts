@@ -4,6 +4,7 @@ export const activities = pgTable("activities", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
   createdAt: timestamp("created_at").notNull().defaultNow(),
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
 });
 
 export type InsertActivities = typeof activities.$inferInsert;
